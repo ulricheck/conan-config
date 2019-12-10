@@ -6,7 +6,7 @@ def post_package(output, conanfile, conanfile_path, **kwargs):
     # Fix shebangs (Overwrite hardcoded paths in shebangs)
     if not os.path.isdir(os.path.join(conanfile.package_folder, "bin")):
         return
-    for exe_name in listdir(os.path.join(conanfile.package_folder, "bin")):
+    for exe_name in os.listdir(os.path.join(conanfile.package_folder, "bin")):
         exe_path = os.path.join(conanfile.package_folder, "bin", exe_name)
         if os.path.isdir(exe_path):
             continue

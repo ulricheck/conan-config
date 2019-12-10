@@ -28,8 +28,8 @@ def post_package(output, conanfile, conanfile_path, **kwargs):
     assert conanfile
     # Copy sources to package
     if not (
-        and "build_type" in conanfile.settings.fields  # Needs build_type setting
-        and conanfile.settings.build_type == "Debug"   # Only for Debug build_type
+        "build_type" in conanfile.settings.fields    # Needs build_type setting
+        and conanfile.settings.build_type == "Debug" # Only for Debug build_type
     ):
         return
     for ext in ("c", "cpp", "cpp", "h", "hpp", "hxx"):
@@ -39,8 +39,8 @@ def pre_package_info(output, conanfile, reference, **kwargs):
     assert conanfile
     # Set source mapping env var
     if not (
-        and "build_type" in conanfile.settings.fields  # Needs build_type setting
-        and conanfile.settings.build_type == "Debug"   # Only for Debug build_type
+        "build_type" in conanfile.settings.fields    # Needs build_type setting
+        and conanfile.settings.build_type == "Debug" # Only for Debug build_type
     ):
         return
     conanfile.env_info.SOURCE_MAP.append("%s|%s" % (conanfile.name, os.path.join(conanfile.package_folder, "src")))
