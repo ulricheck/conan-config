@@ -1,0 +1,1 @@
+aivero https://conan.aa.aivero.dev/artifactory/api/conan/aivero-all True
