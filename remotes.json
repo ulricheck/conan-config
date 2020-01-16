@@ -1,0 +1,14 @@
+{
+ "remotes": [
+  {
+   "name": "aivero",
+   "url": "https://conan.aa.aivero.dev/artifactory/api/conan/aivero-all",
+   "verify_ssl": true
+  },
+  {
+   "name": "prozum",
+   "url": "https://conan.prozum.dk",
+   "verify_ssl": true
+  }
+ ]
+}
