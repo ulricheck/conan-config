@@ -1,7 +1,7 @@
 # Conan config
 This repository contains all the shared conan configuration.
 
-Install: `conan config install git@gitlab.com:aivero/public/conan/conan-config.git`
+Install: `conan config install https://github.copm/ulricheck/conan-config.git`
 
 ## Overview:
 - `conan.conf`: Global configuration for Conan.
