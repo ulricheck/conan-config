@@ -7,7 +7,7 @@ def env_prepend(var, val, sep=os.pathsep):
     os.environ[var] = val + (sep + os.environ[var] if var in os.environ else "")
 
 
-def pre_build(output, conanfile, reference, **kwargs):
+def pre_build(output, conanfile, reference=None, **kwargs):
     env_prepend("PKG_CONFIG_PATH", conanfile.build_folder, ":")
 
 
